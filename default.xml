@@ -23,5 +23,6 @@
   <project remote="freescale" revision="thud" name="Documentation" path="sources/Documentation"/>
 
   <project remote="dhcom" revision="thud" name="meta-dhcom_imx6" path="sources/meta-dhcom_imx6"/>
+  <project remote="dhcom" revision="layers" name="dhcom_imx6-bsp-platform" path="sources/base"/>
 
 </manifest>
