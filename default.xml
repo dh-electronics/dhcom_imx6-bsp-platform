@@ -23,7 +23,7 @@
   <project remote="freescale" revision="thud" name="Documentation" path="sources/Documentation"/>
 
   <project remote="dhcom" revision="thud" name="meta-dhcom_imx6" path="sources/meta-dhcom_imx6">
-    <linkfile dest="sources/meta-dhcom_imx6/conf/bblayers.conf" src"=conf/bblayers.conf"/>
+    <linkfile dest="sources/meta-dhcom_imx6/conf/bblayers.conf" src="conf/bblayers.conf"/>
   </project>
   <project remote="dhcom" revision="thud" name="meta-dhcom_nbox" path="sources/meta-dhcom_nbox">
 	<linkfile dest="sources/meta-dhcom_nbox/conf/bblayers.conf" src="conf/bblayers.conf"/>
