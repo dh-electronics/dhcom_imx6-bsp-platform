@@ -24,7 +24,7 @@
 
   <project remote="dhcom" revision="thud" name="meta-dhcom_imx6" path="sources/meta-dhcom_imx6"/>
   <project remote="dhcom" revision="thud" name="meta-dhcom_nbox" path="sources/meta-dhcom_nbox">
-	<copyfile src="conf/bblayers.conf" dest="sources/base/conf"/>
+	<copyfile src="conf/bblayers.conf" dest="sources/base/conf/bblayers.conf"/>
   </project>
 
 </manifest>
