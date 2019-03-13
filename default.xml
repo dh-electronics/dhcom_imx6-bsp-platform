@@ -6,7 +6,7 @@
   <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
   <remote fetch="https://github.com/Freescale" name="freescale"/>
   <remote fetch="https://github.com/openembedded" name="oe"/>
-  <remote fetch="https://dhplgl01/dhcom-imx6" name="dhcom"/>
+  <remote fetch="https://github.com/dh-electronics" name="dhcom"/>
 
   <project remote="yocto" revision="thud" name="poky" path="sources/poky"/>
   <project remote="yocto" revision="thud" name="meta-freescale" path="sources/meta-freescale"/>
@@ -23,10 +23,7 @@
   <project remote="freescale" revision="thud" name="Documentation" path="sources/Documentation"/>
 
   <project remote="dhcom" revision="thud" name="meta-dhcom_imx6" path="sources/meta-dhcom_imx6">
-    <linkfile dest="sources/meta-dhcom_imx6/conf/bblayers.conf" src"=conf/bblayers.conf"/>
-  </project>
-  <project remote="dhcom" revision="thud" name="meta-dhcom_nbox" path="sources/meta-dhcom_nbox">
-	<linkfile dest="sources/meta-dhcom_nbox/conf/bblayers.conf" src="conf/bblayers.conf"/>
+	<copyfile src="conf/bblayers.conf" dest="sources/base/conf/bblayers.conf"/>
   </project>
 
 </manifest>
