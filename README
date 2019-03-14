@@ -38,7 +38,7 @@ $: repo sync
 
 4. Setup Yocto environment and build your Image (Example: DHCOM i.MX6ULL)
 
-$: MACHINE=dhcom4bimx6ull DISTRO=fslc-framebuffer source ./setup-environment build
+$: MACHINE=dhcom1bimx6ull DISTRO=fslc-framebuffer source ./setup-environment build
 $: bitbake core-image-minimal
 
 For other DHCOM modules or customer specific settings, $MACHINE and Bitbake-Image might differ.
@@ -49,7 +49,7 @@ For other DHCOM modules or customer specific settings, $MACHINE and Bitbake-Imag
   Yocto builds a Wic SD card image which is stored in the build directory.
   Make sure to change the device name in the following command before call.
 
-$: cd tmp/deploy/images/dhcom4bimx6ull/
-$: gunzip -c core-image-minimal-dhcom4bimx6ull.wic.gz | sudo dd of=/dev/sdX bs=1M iflag=fullblock oflag=direct conv=fsync status=progress
+$: cd tmp/deploy/images/dhcom1bimx6ull/
+$: gunzip -c core-image-minimal-dhcom1bimx6ull.wic.gz | sudo dd of=/dev/sdX bs=1M iflag=fullblock oflag=direct conv=fsync status=progress
 
 
