@@ -1,0 +1,46 @@
+DHCOM i.MX6 Yocto BSP Platform
+==============================
+
+Supported boards
+----------------
+
+i.MX6ULL
+
+
+Quick Start
+-----------
+
+1. Install Google's repo utility
+
+$: mkdir ~/bin
+$: curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+$: chmod a+x ~/bin/repo
+
+  You can choose any other directory to download the tool. Just make sure that its available in your $PATH variable.
+
+
+2. Create a project directory
+
+$: mkdir dhcom-yocto-bsp
+
+
+3. Initialize repositories and download the sources
+
+$: repo init -u https://github.com/dh-electronics/dhcom_imx6-bsp-platform -b thud_box
+
+  To download Yocto Thud for nBox, choose branch "thud_nbox". 
+
+  After the repositories are successfully initialized, download the sources
+
+$: repo sync
+
+
+4. Setup Yocto environment and build your Image
+
+$: MACHINE=dhcom4bimx6ull_nbox DISTRO=fslc-framebuffer source ./setup-environment build
+$: bitbake nbox-core-image-minimal
+
+For other DHCOM modules or customer specific settings, $MACHINE and Bitbake-Image might differ.
+
+
+
