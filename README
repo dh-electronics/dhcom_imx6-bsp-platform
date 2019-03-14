@@ -44,4 +44,12 @@ $: bitbake core-image-minimal
 For other DHCOM modules or customer specific settings, $MACHINE and Bitbake-Image might differ.
 
 
+5. Applying your image to SD card
+
+  Yocto builds a Wic SD card image which is stored in the build directory.
+  Make sure to change the device name in the following command before call.
+
+$: cd tmp/deploy/images/dhcom4bimx6ull/
+$: gunzip -c core-image-minimal-dhcom4bimx6ull.wic.gz | sudo dd of=/dev/sdX bs=1M iflag=fullblock oflag=direct conv=fsync status=progress
+
 
