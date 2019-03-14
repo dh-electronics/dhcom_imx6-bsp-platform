@@ -34,13 +34,20 @@ $: repo init -u https://github.com/dh-electronics/dhcom_imx6-bsp-platform -b thu
 
 $: repo sync
 
-
-4. Setup Yocto environment and build your Image
+4. Setup Yocto environment and build your image
 
 $: MACHINE=dhcom4bimx6ull_nbox DISTRO=fslc-framebuffer source ./setup-environment build
 $: bitbake nbox-core-image-minimal
 
-For other DHCOM modules or customer specific settings, $MACHINE and Bitbake-Image might differ.
+  For other DHCOM modules or customer specific settings, $MACHINE and Bitbake-Image might differ.
+
+5. Applying your image to SD card
+
+  Yocto builds a Wic SD card image which is stored in the build directory.
+  Make sure to change the device name in the following command before call.
+
+$: cd tmp/deploy/images/dhcom4bimx6ull_nbox/
+$: gunzip -c nbox-core-image-minimal-dhcom4bimx6ull_nbox.wic.gz | sudo dd of=/dev/sdX bs=1M iflag=fullblock oflag=direct conv=fsync status=progress
 
 
 
