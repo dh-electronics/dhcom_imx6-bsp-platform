@@ -36,7 +36,7 @@ $: repo sync
 
 4. Setup Yocto environment and build your image
 
-$: MACHINE=dhcom4bimx6ull_nbox DISTRO=fslc-framebuffer source ./setup-environment build
+$: MACHINE=dhcom1bimx6ull_nbox DISTRO=fslc-framebuffer source ./setup-environment build
 $: bitbake nbox-core-image-minimal
 
   For other DHCOM modules or customer specific settings, $MACHINE and Bitbake-Image might differ.
@@ -46,8 +46,8 @@ $: bitbake nbox-core-image-minimal
   Yocto builds a Wic SD card image which is stored in the build directory.
   Make sure to change the device name in the following command before call.
 
-$: cd tmp/deploy/images/dhcom4bimx6ull_nbox/
-$: gunzip -c nbox-core-image-minimal-dhcom4bimx6ull_nbox.wic.gz | sudo dd of=/dev/sdX bs=1M iflag=fullblock oflag=direct conv=fsync status=progress
+$: cd tmp/deploy/images/dhcom1bimx6ull_nbox/
+$: gunzip -c nbox-core-image-minimal-dhcom1bimx6ull_nbox.wic.gz | sudo dd of=/dev/sdX bs=1M iflag=fullblock oflag=direct conv=fsync status=progress
 
 
 
