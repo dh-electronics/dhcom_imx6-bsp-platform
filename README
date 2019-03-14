@@ -26,7 +26,7 @@ $: mkdir dhcom-yocto-bsp
 
 3. Initialize repositories and download the sources
 
-$: repo init -u https://github.com/dh-electronics/dhcom_imx6-bsp-platform -b thud_box
+$: repo init -u https://github.com/dh-electronics/dhcom_imx6-bsp-platform -b thud_nbox
 
   To download Yocto Thud for nBox, choose branch "thud_nbox". 
 
