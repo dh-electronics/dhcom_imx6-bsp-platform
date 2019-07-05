@@ -49,5 +49,16 @@ $: bitbake nbox-core-image-minimal
 $: cd tmp/deploy/images/dhcom1bimx6ull_nbox/
 $: gunzip -c nbox-core-image-minimal-dhcom1bimx6ull_nbox.wic.gz | sudo dd of=/dev/sdX bs=1M iflag=fullblock oflag=direct conv=fsync status=progress
 
+-----------
+
+Further informations for Bluetooth usage via UART
+
+-----------
+Init sequence:
+$: gpioset $(gpiofind I)=0
+$: gpioset $(gpiofind I)=1
+$: hciattach /dev/ttymxc1 bcm43xx 3000000 flow -t 20
+$: hciconfig hci0 down
+$: hciconfig hci0 up
 
 
