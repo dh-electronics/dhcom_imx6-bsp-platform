@@ -51,9 +51,15 @@ $: gunzip -c nbox-core-image-minimal-dhcom1bimx6ull_nbox.wic.gz | sudo dd of=/de
 
 -----------
 
-Further informations for Bluetooth usage via UART
+Available Machines:
+
+dhcom1bimx6ull_nbox
+dhcom1bimx6ull_nbox-wifi
 
 -----------
+
+Further informations for Bluetooth usage via UART
+
 Init sequence:
 $: gpioset $(gpiofind I)=0
 $: gpioset $(gpiofind I)=1
