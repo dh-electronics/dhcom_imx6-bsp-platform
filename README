@@ -35,8 +35,13 @@ $: repo init -u https://github.com/dh-electronics/dhcom_imx6-bsp-platform -b $BR
 
 $: repo sync
 
+4. Available Machine Types
 
-4. Setup Yocto environment and build your Image (Example: DHCOM i.MX6ULL)
+i.MX6ULL:
+dhcom1bimx6ull - i.MX6ULL for PDK2
+dhcom1bimx6ulldrc02 - i.MX6ULL for DRC02
+
+5. Setup Yocto environment and build your Image (Example: DHCOM i.MX6ULL)
 
 $: MACHINE=dhcom1bimx6ull DISTRO=fslc-framebuffer source ./setup-environment build
 $: bitbake core-image-minimal
@@ -44,7 +49,7 @@ $: bitbake core-image-minimal
 For other DHCOM modules or customer specific settings, $MACHINE and Bitbake-Image might differ.
 
 
-5. Applying your image to SD card
+6. Applying your image to SD card
 
   Yocto builds a Wic SD card image which is stored in the build directory.
   Make sure to change the device name in the following command before call.
