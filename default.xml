@@ -1,29 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <default sync-j="4" revision="thud"/>
+  <default sync-j="4" revision="dunfell"/>
 
   <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
   <remote fetch="https://github.com/Freescale" name="freescale"/>
   <remote fetch="https://github.com/openembedded" name="oe"/>
   <remote fetch="https://github.com/dh-electronics" name="dhcom"/>
+  <remote fetch="https://github.com/sbabic/" name="sbabic"/>
 
-  <project remote="yocto" revision="thud" name="poky" path="sources/poky"/>
-  <project remote="yocto" revision="thud" name="meta-freescale" path="sources/meta-freescale"/>
+  <project remote="yocto" revision="dunfell" name="poky" path="sources/poky"/>
 
-  <project remote="oe" revision="thud" name="meta-openembedded" path="sources/meta-openembedded"/>
+  <project remote="oe" revision="dunfell" name="meta-openembedded" path="sources/meta-openembedded"/>
+  <project remote="qt" revision="dunfell" name="meta-qt5" path="sources/meta-qt5"/>
+  <project remote="oe" revision="dunfell" name="meta-python2" path="sources/meta-python2"/>
 
-  <project remote="freescale" revision="thud" name="fsl-community-bsp-base" path="sources/base">
-	<linkfile dest="README" src="README"/>
+  <project remote="dhcom" revision="dunfell-3.1" name="meta-mainline-common" path="meta-mainline-common"/>
+  <project remote="dhcom" revision="dunfell-3.1" name="meta-mainline-graphics" path="meta-mainline-graphics"/>
+  <project remote="dhcom" revision="dunfell" name="meta-dhsom-imx-bsp" path="sources/meta-dhsom-imx-bsp">
+	<copyfile src="conf/bblayers.conf" dest="sources/base/conf/bblayers.conf"/>
 	<linkfile dest="setup-environment" src="setup-environment"/>
   </project>
-
-  <project remote="freescale" revision="thud" name="meta-freescale-3rdparty" path="sources/meta-freescale-3rdparty"/>
-  <project remote="freescale" revision="thud" name="meta-freescale-distro" path="sources/meta-freescale-distro"/>
-  <project remote="freescale" revision="thud" name="Documentation" path="sources/Documentation"/>
-
-  <project remote="dhcom" revision="thud" name="meta-dhcom_imx6" path="sources/meta-dhcom_imx6">
-	<copyfile src="conf/bblayers.conf" dest="sources/base/conf/bblayers.conf"/>
-  </project>
+  <project remote="dhcom" revision="dunfell" name="meta-dhsom-extras" path="meta-dhsom-extras"/>
+  <project remote="sbabic" revision="dunfell" name="meta-swupdate" path="sources/meta-swupdate"/>
 
 </manifest>
